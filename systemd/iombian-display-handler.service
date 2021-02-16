@@ -1,0 +1,14 @@
+[Unit]
+Description=IoMBian Display Handler
+
+[Service]
+Type=simple
+User=root
+Restart=always
+RestartSec=5
+
+WorkingDirectory=/opt/iombian-display-handler
+ExecStart=/opt/iombian-display-handler/venv/bin/python /opt/iombian-display-handler/main.py
+
+[Install]
+WantedBy=multi-user.target
