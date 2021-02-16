@@ -7,6 +7,8 @@ This service displays different system information on the following display:
 
 ## Installation
 
+> Warning: SPI and I2C should be first enabled in the board! 
+
 - Clone the repo into a temp folder:
 
 > ```git clone https://github.com/Tknika/iombian-display-handler.git /tmp/iombian-display-handler && cd /tmp/iombian-display-handler```
@@ -26,6 +28,8 @@ This service displays different system information on the following display:
 - Create the virtual environment and install the dependencies:
 
 > ```cd /opt/iombian-display-handler```
+
+> ```sudo apt install -y python3-venv python3-dev python3-pil ttf-dejavu libopenjp2-7```
 
 > ```python3 -m venv venv```
 
