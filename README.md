@@ -9,27 +9,29 @@ This service displays different system information on the following display:
 
 > Warning: SPI and I2C should be first enabled in the board! 
 
+- Define project name in an environment variable:
+
+> ```PROJECT_NAME=iombian-display-handler```
+
 - Clone the repo into a temp folder:
 
-> ```git clone https://github.com/Tknika/iombian-display-handler.git /tmp/iombian-display-handler && cd /tmp/iombian-display-handler```
+> ```git clone https://github.com/Tknika/${PROJECT_NAME}.git /tmp/${PROJECT_NAME} && cd /tmp/${PROJECT_NAME}```
 
 - Create the installation folder and move the appropiate files (edit the user):
 
-> ```sudo mkdir /opt/iombian-display-handler```
+> ```sudo mkdir /opt/${PROJECT_NAME}```
 
-> ```sudo cp requirements.txt /opt/iombian-display-handler```
+> ```sudo cp requirements.txt /opt/${PROJECT_NAME}```
 
-> ```sudo cp -r src/* /opt/iombian-display-handler```
+> ```sudo cp -r src/* /opt/${PROJECT_NAME}```
 
-> ```sudo cp systemd/iombian-display-handler.service /etc/systemd/system/```
+> ```sudo cp systemd/${PROJECT_NAME}.service /etc/systemd/system/```
 
-> ```sudo chown -R iompi:iompi /opt/iombian-display-handler```
+> ```sudo chown -R iompi:iompi /opt/${PROJECT_NAME}```
 
 - Create the virtual environment and install the dependencies:
 
-> ```cd /opt/iombian-display-handler```
-
-> ```sudo apt install -y python3-venv python3-dev python3-pil ttf-dejavu libopenjp2-7```
+> ```cd /opt/${PROJECT_NAME}```
 
 > ```python3 -m venv venv```
 
@@ -41,7 +43,7 @@ This service displays different system information on the following display:
 
 - Start the script
 
-> ```sudo systemctl enable iombian-display-handler.service && sudo systemctl start iombian-display-handler.service```
+> ```sudo systemctl enable ${PROJECT_NAME}.service && sudo systemctl start ${PROJECT_NAME}.service```
 
 ## Author
 
