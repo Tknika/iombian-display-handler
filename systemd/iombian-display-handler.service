@@ -6,6 +6,7 @@ Type=simple
 User=root
 Restart=always
 RestartSec=5
+TimeoutStopSec=5
 
 WorkingDirectory=/opt/iombian-display-handler
 ExecStart=/opt/iombian-display-handler/venv/bin/python /opt/iombian-display-handler/main.py
