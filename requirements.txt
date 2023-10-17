@@ -2,5 +2,5 @@ qrcode[pil]==6.1
 Pillow==8.1.0
 adafruit-circuitpython-rgb-display==3.10.5
 adafruit-blinka==6.2.1
-RPi.GPIO==0.7.1a4
-pyzmq==21.0.1
+RPi.GPIO==0.7.1
+pyzmq==25.1.1
